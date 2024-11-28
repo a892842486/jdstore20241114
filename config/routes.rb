@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     resources :products
     resources :orders do
       member do
-        post :cancel
+        get :cancel
         post :ship
         post :shipped
         post :return
@@ -33,6 +33,7 @@ Rails.application.routes.draw do
     member do
       post :pay_with_creditcard
       post :pay_with_ewallet
+      post :apply_to_cancel
     end
   end
 
